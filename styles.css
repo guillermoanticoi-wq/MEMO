@@ -234,3 +234,102 @@ nav a:hover { color: #00aaff; }
     padding: 10px 0;
     font-size: 1.1rem;
 }
+/* --------------------------- */
+/*   RESPONSIVE PARA CELULAR   */
+/* --------------------------- */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    /* HERO - ADAPTADO A TU CÓDIGO REAL */
+    #hero {
+        display: flex;
+        flex-direction: column; /* ← hace que la imagen quede arriba y el texto abajo */
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 250px; /* ajusta si quieres más alto */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* NOSOTROS */
+    .nosotros-card {
+        width: 90%;
+        margin: auto;
+        font-size: 1rem;
+    }
+
+    /* PLANES */
+    .planes-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .plan-card {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    /* OBJETIVOS */
+    .objetivos-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .objetivo-card img.img-clip {
+        height: 220px;
+    }
+
+    /* CONTACTO */
+    #contacto {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* MODAL */
+    .modal-content-container {
+        width: 90%;
+    }
+
+    .caption {
+        font-size: 0.9rem;
+    }
+}
