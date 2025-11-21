@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Tecnológico | Automatización y Robótica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">TechClub<span>+</span></div>
+        <nav>
+            <a href="#hero">Inicio</a>
+            <a href="#nosotros">Sobre Nosotros</a>
+            <a href="#planes">Planes</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-img"></div> 
+        <div class="hero-text">
+            <h1>Club Tecnológico de Automatización, Programación y Robótica</h1>
+            <p>Formando a la nueva generación tecnológica con experiencias reales, competencias y talleres avanzados.</p>
+            <a href="#planes" class="btn">Ver Planes</a>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <div class="nosotros-card">
+            <p>
+                Somos un club enfocado en promover el mundo tecnológico en estudiantes y aficionados,
+                ofreciendo talleres, competencias internas y experiencias reales con hardware profesional.
+                Nuestra misión es mejorar la educación y preparar a los jóvenes para el futuro digital.
+            </p>
+        </div>
+    </section>
+
+    <section id="planes">
+        <h2>Planes y Packs</h2>
+        <div class="planes-container">
+            <div class="plan-card">
+                <h3>Instituciones</h3>
+                <p>✔ Equipos (PC, notebooks, instrumentos)<br>
+                   ✔ Software educativo especializado<br>
+                   ✔ Controladores (PLC, Arduino, sensores)<br>
+                   ✔ Profesor o monitor certificado<br>
+                   ✔ Competencias intercolegios<br>
+                </p>
+                <a href="#contacto" class="btn-card">Solicitar Información</a>
+            </div>
+            <div class="plan-card">
+                <h3>Aficionados</h3>
+                <p>✔ Acceso a la sede y laboratorios<br>
+                   ✔ Club de robótica y programación<br>
+                   ✔ Kits de práctica y componentes<br>
+                   ✔ Torneos y ferias tecnológicas<br>
+                   ✔ Certificaciones internas<br>
+                </p>
+                <a href="#contacto" class="btn-card">Unirse</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="objetivos">
+        <h2>Objetivos</h2>
+        <div class="objetivos-grid">
+            <div class="objetivo-card">
+                <img 
+                    src="img/54852294684_235153f719_o-scaled.jpg" 
+                    alt="Competencias" 
+                    class="img-clip"
+                    onclick="openLightbox('img/54852294684_235153f719_o-scaled.jpg', 'Organizamos desafíos para potenciar el talento tecnológico.')"
+                >
+                <h3>Competencias</h3>
+            </div>
+
+            <div class="objetivo-card">
+                <img 
+                    src="img/feriajpg.jpg" 
+                    alt="Ferias Tecnológicas" 
+                    class="img-clip"
+                    onclick="openLightbox('img/feriajpg.jpg', 'Exposiciones de proyectos y ferias tecnológicas.')"
+                >
+                <h3>Ferias y Exposiciones</h3>
+            </div>
+
+            <div class="objetivo-card">
+                <img 
+                    src="img/arduino-alvik-1024x576-1024x585.jpg.webp" 
+                    alt="Innovación" 
+                    class="img-clip"
+                    onclick="openLightbox('img/arduino-alvik-1024x576-1024x585.jpg.webp', 'Fomentamos la innovación y la creatividad en cada proyecto.')"
+                >
+                <h3>Innovación y Creatividad</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Escríbenos para conocer más sobre el club: <b>contacto@techclub.cl</b></p>
+    </section>
+
+    <!-- MODAL LIGHTBOX -->
+    <div id="lightbox-modal" class="modal" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content-container">
+            <img id="lightbox-image" class="modal-content"> 
+            <div id="lightbox-caption" class="caption"></div> 
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
