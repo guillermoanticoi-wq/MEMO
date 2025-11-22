@@ -44,6 +44,20 @@ nav a {
 
 nav a:hover { color: #00aaff; }
 
+/* BOTÓN FORMULARIO */
+nav .form-btn {
+    background: #00aaff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav .form-btn:hover {
+    background: #0088cc;
+}
+
 /* HERO */
 #hero {
     height: 95vh;
@@ -142,7 +156,7 @@ nav a:hover { color: #00aaff; }
 
 .btn-card:hover { background: #0088cc; }
 
-/* OBJETIVOS CON LIGHTBOX */
+/* OBJETIVOS */
 #objetivos { padding-bottom: 50px; }
 
 .objetivos-grid {
@@ -233,4 +247,115 @@ nav a:hover { color: #00aaff; }
     color: #ccc;
     padding: 10px 0;
     font-size: 1.1rem;
+}
+/* ============================
+   RESPONSIVE PARA CELULARES
+   ============================ */
+@media (max-width: 768px) {
+
+    /* NAV – convertir el menú en columna si quieres */
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 8px;
+        display: inline-block;
+        font-size: 0.95rem;
+    }
+
+    /* HERO */
+    #hero {
+        height: auto;
+        padding: 40px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .hero-img {
+        opacity: 0.25;
+        background-position: top;
+    }
+
+    /* SOBRE NOSOTROS */
+    .nosotros-card {
+        width: 90%;
+        font-size: 1rem;
+        padding: 18px;
+    }
+
+    /* PLANES */
+    .planes-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .plan-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    /* OBJETIVOS */
+    .objetivos-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .objetivo-card img.img-clip {
+        height: 200px;
+    }
+
+    /* CONTACTO */
+    #contacto {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    /* LIGHTBOX */
+    .modal-content-container {
+        width: 95%;
+    }
+
+    .caption {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas muy pequeñas (celulares chicos tipo iPhone SE) */
+@media (max-width: 400px) {
+
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .plan-card {
+        width: 92%;
+    }
+
+    .objetivo-card img.img-clip {
+        height: 160px;
+    }
 }

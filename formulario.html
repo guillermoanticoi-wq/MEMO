@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario — Club Tecnológico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">TGClub<span>+</span></div>
+    <nav>
+        <a href="index.html">Volver</a>
+    </nav>
+</header>
+
+<section id="formulario" style="padding:60px 20px; max-width:700px; margin:auto; color:white;">
+    <h2 style="text-align:center;">Formulario de Opinión</h2>
+    <p style="text-align:center;">Tu opinión nos ayuda a mejorar el Club Tecnológico</p>
+
+    <form id="encuestaForm" style="margin-top:40px; display:flex; flex-direction:column; gap:25px;">
+
+        <label>
+            <b>1. ¿Entendiste qué ofrece el club?</b><br>
+            <textarea name="p1" maxlength="200" required style="width:100%; height:80px;"></textarea>
+        </label>
+
+        <label>
+            <b>2. ¿Te interesaría participar o saber más?</b><br>
+            <textarea name="p2" maxlength="200" required style="width:100%; height:80px;"></textarea>
+        </label>
+
+        <label>
+            <b>3. ¿Qué sección te llamó más la atención?</b><br>
+            <textarea name="p3" maxlength="200" required style="width:100%; height:80px;"></textarea>
+        </label>
+
+        <label>
+            <b>4. ¿Te gustaría formar parte de una comunidad tecnológica?</b><br>
+            <textarea name="p4" maxlength="200" required style="width:100%; height:80px;"></textarea>
+        </label>
+
+        <label>
+            <b>5. ¿Te atrae la idea de competencias y ferias tecnológicas?</b><br>
+            <textarea name="p5" maxlength="200" required style="width:100%; height:80px;"></textarea>
+        </label>
+
+        <button type="submit" style="padding:12px; background:#00aaff; border:none; color:black; font-weight:bold; cursor:pointer; border-radius:5px;">
+            Enviar Respuestas
+        </button>
+    </form>
+
+    <p id="mensajeExito" style="display:none; margin-top:25px; color:#00ff99; text-align:center; font-size:1.2rem;">
+        ✔ ¡Gracias! Tus respuestas fueron enviadas correctamente.
+    </p>
+</section>
+
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycby3tr4ZknJlVcaxM2j8HLhhV0uSKkXd9XFqDLw2um2gh-_uelUOnM1NklmcB2E3u5WSpg/exec";
+const form = document.getElementById("encuestaForm");
+const mensaje = document.getElementById("mensajeExito");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("Respuesta del script:", data);
+
+        // Ocultar el formulario para que no se pueda enviar otra vez
+        form.style.display = "none";
+
+        // Mostrar el mensaje de éxito
+        mensaje.style.display = "block";
+    })
+    .catch(err => console.error("Error al enviar", err));
+});
+</script>
+
+</body>
+</html>
